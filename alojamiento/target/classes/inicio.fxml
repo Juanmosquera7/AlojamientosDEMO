@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.text.Text?>
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.control.Alert?>
+<?import javafx.scene.control.Alert.AlertType?>
+
+<StackPane xmlns:fx="http://javafx.com/fxml" fx:controller="co.edu.uniquindio.alojamiento.controladores.InicioControlador">
+    <VBox alignment="CENTER" spacing="20.0" padding="20.0">
+        <!-- Título de la página -->
+        <Text text="Bienvenido a BookYourStay" style="-fx-font-size: 24px; -fx-font-weight: bold;" />
+
+        <!-- Botones de iniciar sesión y registro -->
+        <HBox spacing="20" alignment="CENTER">
+            <Button text="Iniciar Sesión" onAction="#irIniciarSesion" maxWidth="150.0"/>
+            <Button text="Registrar Cliente" onAction="#irRegistroCliente" maxWidth="150.0"/>
+        </HBox>
+
+        <!-- Búsqueda de alojamiento -->
+        <VBox spacing="10" alignment="CENTER">
+            <Text text="Buscar alojamiento:" />
+            <TextField fx:id="busquedaAlojamiento" promptText="Escribe la ciudad o el tipo de alojamiento"/>
+            <Button text="Buscar" onAction="#buscarAlojamientos" maxWidth="150.0"/>
+        </VBox>
+
+        <!-- Sección de alojamientos disponibles -->
+        <VBox spacing="10" alignment="CENTER">
+            <Text text="Alojamientos Disponibles" style="-fx-font-size: 18px;" />
+            <ListView fx:id="listaAlojamientosDisponibles" prefHeight="200.0" prefWidth="300.0" />
+        </VBox>
+
+        <!-- Sección de ofertas -->
+        <VBox spacing="10" alignment="CENTER">
+            <Text text="Ofertas Especiales" style="-fx-font-size: 18px;" />
+            <ListView fx:id="listaOfertas" prefHeight="200.0" prefWidth="300.0" />
+        </VBox>
+    </VBox>
+</StackPane>
+
